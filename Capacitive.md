@@ -11,7 +11,7 @@
 
 ### Default pinout: Project "8x24"
 
-![default pinout](docs/8x24_pinout.png)
+![default pinout](pinouts/8x24_pinout.png)
 **WARNING** to use column 24, **R5** (between `0.1` and `12.6`) MUST be removed.
 
 If you don't - column will always read zeroes. Which is, for a NORMALLY_HIGH switch like Beamspring, means they will appear **PRESSED ALL THE TIME**.
