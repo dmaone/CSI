@@ -63,13 +63,13 @@ You likely don't need to change bootloader - but building it will verify that yo
 * Compilation errors: pay attention to the **IMPORTANT** warning. If it says "Release" - ask at DT, but see the top paragraph. You get support that you paid for (and you can't pay and there are no plans for that).
 
 ### Firmware
-I will use "8x24" as a project name, but if you don't want to have merge conflicts in config.h every time you pull - you can copy+rename the project. You will only copy programmable hardware settings (which will not change - I run that for 1.5 years now and never had to) and config.h. Everything else will NOT be copied, so you will get all the updates.
+I will use "Capsense" as a project name, but if you don't want to have merge conflicts in config.h every time you pull - you can copy+rename the project. You will only copy programmable hardware settings (which will not change - I run that since 2017 and never had to) and config.h. Everything else will NOT be copied, so you will get all the updates.
 
-Do a smoke test first: Repeat the "Bootloader" part for the 8x24 project.
+Do a smoke test first: Repeat the "Bootloader" part for the Capsense project.
 
 When that succeeds - it's a good time to make your firmware customizations.
 
-`CommonSense/8x24.cydsn/config.h` is a config file. You can set number of rows, columns and layers there, as well as switch type.
+`Capsense.cydsn/config.h` is a config file. You can set number of rows, columns and layers there, as well as switch type. There are presets for popular configurations, activated via `#define HARDWARE_VARIANT HW_X` - or you can use `#define HARDWARE_VARIANT HW_CUSTOM` if you know what you're doing.
 Again: **build without any changes first**!
 
 For non-default pin mapping: Expand a project in the left pane, click "Pins" in "Design Wide Resources". You will see chip model and a table in the big window. Assign pins according to plan.

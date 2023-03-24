@@ -5,11 +5,12 @@
 # Planning: pinouts
 
 * It is STRONGLY RECOMMENDED to set matrix size to your physical matrix size.
+* There are some ready-made configurations for the default pinout in `config.h`.
 * YOU MUST USE CONTIGUOUS ROWS/COLUMNS, STARTING FROM ZERO.
 * Pins on the board are marked `0.0`, on envelope - `P0_0`, and in PSoC Creator - `P0[0]`. All 3 refer to the same pin. `2.3`-`2.7` means "2.3 to 2.7, including".
 * Effort is made to make pins contiguous, but that's not always possible, so pay attention.
 
-### Default pinout: Project "8x24"
+### Default pinout: Project "Capsense"
 
 ![default pinout](pinouts/8x24_pinout.png)
 **WARNING** to use column 24, **R5** (between `0.1` and `12.6`) MUST be removed.
@@ -41,9 +42,9 @@ If you don't - column will always read zeroes. Which is, for a NORMALLY_HIGH swi
 **!!!NOTE!!!** If you see double presses on some keys, set threshold higher - just under the steady pressed state. Some keys have physical bounce and there are two peaks. Controller is too fast and sees this as 2 keypresses.
 
 Short version ():
-* Click "Key Monitor" button. 
+* Click "Key Monitor" button.
 * Click "Start!". Get the idea of levels that should be there - press keys, observe readings going up and down. Small numbers below 7-segment indicators are min/avg/max.
-* Click "Stop!". Select "Max" into dropdown near the "reset" button, click "Reset", "Start!". 
+* Click "Stop!". Select "Max" into dropdown near the "reset" button, click "Reset", "Start!".
 * Wait 15 seconds or longer, while readings stabilize.
 * click "Stop!". Click "Set thresholds". Close window.
 * Click "Thresholds" in the main window. put a small positive value (see below) into adjuster spinbox, click "Adjust".
